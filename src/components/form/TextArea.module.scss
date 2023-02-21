@@ -1,0 +1,15 @@
+.container {
+  display: block;
+  margin: 0 auto;
+  width: 60%;
+  .allButtons {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    position: relative;
+    padding: 5px;
+    div {
+      margin: 5px;
+    }
+  }
+}

@@ -1,0 +1,15 @@
+.allButtons {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    position: relative;
+    width: fit-content;
+
+    span {
+      margin: 0 10px;
+    }
+
+    .icon {
+      cursor: pointer;
+    }
+  }

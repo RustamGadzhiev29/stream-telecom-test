@@ -1,24 +1,24 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import "./App.scss";
+import Table from "./components/table/Table";
+import Header from "./components/header/Header";
+import Navigation from "./components/navigation/Navigation";
+import { Layout } from "antd";
+import { BrowserRouter as Router, Route, Link, Routes } from "react-router-dom";
+import FirstTask from "./components/firstTask/FirstTask";
+import SecondTask from "./components/secondTask/SecondTask";
+import "antd/dist/reset.css";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Header />
+      <Navigation />
+      <Routes>
+        <Route path="/third" element={<Table />} />
+        <Route path="/first" element={<FirstTask />} />
+        <Route path="/second" element={<SecondTask />} />
+      </Routes>
     </div>
   );
 }
